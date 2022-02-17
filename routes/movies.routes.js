@@ -82,7 +82,7 @@ router.route("/movies/:id/edit")
     const movie = {title, genre, plot, cast}
 
     Movie.findByIdAndUpdate(id, movie, {new:true})
-    .then(()=> res.redirect(`movies/${id}`))
+    .then(()=> res.redirect(`/movies/${id}`))
     .catch((error)=>console.log(error))
 })
         
